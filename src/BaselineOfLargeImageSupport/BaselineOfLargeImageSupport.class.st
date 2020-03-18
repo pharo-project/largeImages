@@ -13,7 +13,9 @@ BaselineOfLargeImageSupport >> baseline: spec [
 
 			spec
 				baseline: 'Spotter'
-				with: [ spec repository: 'github://tesonep/spotter/src' ].
+				with: [ spec 
+					loads: 'indexes';
+					repository: 'github://tesonep/spotter/src' ].
 
 			spec
 				baseline: 'Complishon'
