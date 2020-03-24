@@ -12,7 +12,7 @@ This baseline performs two diferent things:
   - [Complishon](https://github.com/guillep/complishon) a new completion engine for Pharo that provides better contextual
   answers and it is implemented to minimize the queries to the global system. 
 
-  - [Containers/CTTrie] (https://github.com/tesonep/Containers-Trie) an implementation of Optimized Tries.
+  - [Containers/CTTrie](https://github.com/tesonep/Containers-Trie) an implementation of Optimized Tries.
 
   - [Aleph](https://github.com/estebanlm/aleph) an index system to provide better queries for Spotter and all the users 
   of system navigation. It includes two different implementation, one using a dictionary and the other using a Optimized 
@@ -46,6 +46,18 @@ Metacello new
 This baseline installs all the tools and configure them, it also configures the image to apply the settings and executes 
 the initial process of index creation. This process is only needed after the installation and it takes 3 minutes for an 
 image with a ~1.500.000 methods and ~95.000 classes. This image is about 2.5 gb in disk.
+
+# About the Indexes
+
+This baseline creates indexes for the following elements: 
+
+- References
+- Senders
+- Implementors
+- Classes
+
+The indexes for references and senders are built using a hash table, the indexes for implementors and classes uses two 
+optimized tries for each one. As the later requires to have full text search to implement a nice Spotter experience.
 
 # Memory footprint
 
