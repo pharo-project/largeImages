@@ -44,8 +44,9 @@ Metacello new
 ```  
 
 This baseline installs all the tools and configure them, it also configures the image to apply the settings and executes 
-the initial process of index creation. This process is only needed after the installation and it takes 3 minutes for an 
-image with a ~1.500.000 methods and ~95.000 classes. This image is about 2.5 gb in disk.
+the initial process of index creation. 
+This process is only needed after the installation and to give an example, for a 2gb image it takes 3 minutes. 
+Such an image has ~1.500.000 methods and ~95.000 classes. The final image with indexes created is about 2.4 gb in disk.
 
 # About the Indexes
 
