@@ -12,18 +12,20 @@ It relies on two projects that have been integrated in Pharo 9:
 
   - [Spotter](https://github.com/tesonep/spotter) an iteration on the processor model of GTSpotter adding new processors
   that uses a set of composable iterator to perform the queries incrementally. 
-  
+
+These projects are already integrated and their maintainance will be done as part of Pharo project.
+
 This baseline performs three diferent things:
 
 1. It installs the following tools:
 
-  - [Containers/CTTrie](https://github.com/tesonep/Containers-Trie) an implementation of Optimized Tries.
+  - [Containers/CTTrie](https://github.com/pharo-containers/Containers-Trie) an implementation of Optimized Tries.
 
-  - [Aleph](https://github.com/estebanlm/aleph) an index system to provide better queries for Spotter and all the users 
+  - [Aleph](https://github.com/pharo-project/aleph) an index system to provide better queries for Spotter and all the users 
   of system navigation. It includes two different implementation, one using a dictionary and the other using a Optimized 
   Trie.
 
-  - [VM Tunning](https://github.com/tesonep/pharo-vm-tunning) a tool to tune the Garbage Collection of the VM during the
+  - [VM Tunning](https://github.com/pharo-project/pharo-vm-tunning) a tool to tune the Garbage Collection of the VM during the
   execution of the index generation. This is required to have correct usage of memory and generate the indexes in a short
   time.
 
