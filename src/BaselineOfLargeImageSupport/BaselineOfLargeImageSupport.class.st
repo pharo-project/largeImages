@@ -32,9 +32,11 @@ BaselineOfLargeImageSupport >> postload: loader package: packageSpec [
 
 	"I will disable the format of incomplete identifiers, as it has to traverse the whole symbol table"
 	SHRBTextStyler formatIncompleteIdentifiers: false.
+	
+	TKTConfiguration profile: TKTProfile production.
 
 	"I will recalculate the indexes"
 	Smalltalk
 		at: #SptSourceWithIndexFactory
-		ifPresent: [ :sourceWithIndexFactory | sourceWithIndexFactory buildIndexes ]
+		ifPresent: [ :sourceWithIndexFactory | sourceWithIndexFactory buildIndexes ].
 ]
