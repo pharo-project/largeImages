@@ -4,7 +4,7 @@ I implement the beginsWith search
 "
 Class {
 	#name : #SptImplementorsBeginsWithWithIndex,
-	#superclass : #SptGenericGenerator,
+	#superclass : #StGenericGenerator,
 	#instVars : [
 		'text'
 	],
