@@ -22,9 +22,9 @@ BaselineOfLargeImageSupport >> baseline: spec [
 				with: [ spec repository: 'github://pharo-project/aleph/src' ].
 				
 			spec package: 'Spotter-Indexes' with: [ spec requires: #(Aleph VMTunning) ].
-			spec package: 'Spotter-Indexes-Tests' with: [ spec requires: #('GT-Spotter-Indexes') ]. 
+			spec package: 'Spotter-Indexes-Tests' with: [ spec requires: #('Spotter-Indexes') ]. 
 			
-			spec group: 'default' with: #('GT-Spotter-Indexes' 'GT-Spotter-Indexes-Tests')]
+			spec group: 'default' with: #('Spotter-Indexes' 'Spotter-Indexes-Tests')]
 ]
 
 { #category : #actions }
