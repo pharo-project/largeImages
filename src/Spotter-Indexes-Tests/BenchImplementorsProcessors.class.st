@@ -4,7 +4,7 @@ I am a test class to measure the speed of the implementation using the indexes.
 Class {
 	#name : #BenchImplementorsProcessors,
 	#superclass : #Object,
-	#category : #'GT-Spotter-Indexes-Tests'
+	#category : #'Spotter-Indexes-Tests'
 }
 
 { #category : #benchmarking }
@@ -13,7 +13,7 @@ BenchImplementorsProcessors >> benchBeginsWith [
 
 	"Ensure index is calculated"
 	| withIndex withoutIndex |
-	withIndex := SptImplementorsBeginsWithWithIndex new.
+	withIndex := StImplementorsBeginsWithWithIndex new.
 	withIndex index.
 
 	withoutIndex := (SptImplementorsIterator new
@@ -51,7 +51,7 @@ BenchImplementorsProcessors >> benchSubstringWith [
 
 	"Ensure index is calculated"
 	| withIndex withoutIndex |
-	withIndex := SptImplementorsSubstringWithIndex new.
+	withIndex := StImplementorsSubstringWithIndex new.
 	withIndex index.
 
 	withoutIndex := (SptImplementorsIterator new

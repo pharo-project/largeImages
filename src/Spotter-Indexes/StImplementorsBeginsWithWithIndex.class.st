@@ -3,37 +3,37 @@ I am an iterator that uses a generator on top of the Implementors index of Aleph
 I implement the beginsWith search
 "
 Class {
-	#name : #SptImplementorsBeginsWithWithIndex,
+	#name : #StImplementorsBeginsWithWithIndex,
 	#superclass : #StGenericGenerator,
 	#instVars : [
 		'text'
 	],
-	#category : #'GT-Spotter-Indexes'
+	#category : #'Spotter-Indexes'
 }
 
 { #category : #enumerating }
-SptImplementorsBeginsWithWithIndex >> elementsDo: aValuable [
+StImplementorsBeginsWithWithIndex >> elementsDo: aValuable [
 
 	self index 
 		withAllValuesBeginningWith: text 
-		do: [:aMethod | aValuable value: (SptMethodEntry on: aMethod)]
+		do: [:aMethod | aValuable value: (StMethodEntry on: aMethod)]
 ]
 
 { #category : #initialization }
-SptImplementorsBeginsWithWithIndex >> filteringText: aString [
+StImplementorsBeginsWithWithIndex >> filteringText: aString [
 
 	text := aString.
 	self reset
 ]
 
 { #category : #enumerating }
-SptImplementorsBeginsWithWithIndex >> index [
+StImplementorsBeginsWithWithIndex >> index [
 
 	^ AlpIndexManager current indexAt: #implementors
 ]
 
 { #category : #initialization }
-SptImplementorsBeginsWithWithIndex >> initialize [
+StImplementorsBeginsWithWithIndex >> initialize [
 
 	text := ''.
 	super initialize.

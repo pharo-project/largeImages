@@ -3,37 +3,37 @@ I am an iterator that uses a generator on top of the Class index of Aleph.
 I implement the beginsWith search
 "
 Class {
-	#name : #SptClassBeginsWithWithIndex,
+	#name : #StClassBeginsWithWithIndex,
 	#superclass : #StGenericGenerator,
 	#instVars : [
 		'text'
 	],
-	#category : #'GT-Spotter-Indexes'
+	#category : #'Spotter-Indexes'
 }
 
 { #category : #enumerating }
-SptClassBeginsWithWithIndex >> elementsDo: aValuable [
+StClassBeginsWithWithIndex >> elementsDo: aValuable [
 
 	self index 
 		withAllValuesBeginningWith: text 
-		do: [:aClass | aValuable value: (SptClassEntry on: aClass)]
+		do: [:aClass | aValuable value: (StClassEntry on: aClass)]
 ]
 
 { #category : #initialization }
-SptClassBeginsWithWithIndex >> filteringText: aString [
+StClassBeginsWithWithIndex >> filteringText: aString [
 
 	text := aString.
 	self reset
 ]
 
 { #category : #enumerating }
-SptClassBeginsWithWithIndex >> index [
+StClassBeginsWithWithIndex >> index [
 
 	^ AlpIndexManager current indexAt: #classes
 ]
 
 { #category : #initialization }
-SptClassBeginsWithWithIndex >> initialize [
+StClassBeginsWithWithIndex >> initialize [
 
 	text := ''.
 	super initialize.

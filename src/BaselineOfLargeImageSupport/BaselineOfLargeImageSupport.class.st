@@ -21,8 +21,8 @@ BaselineOfLargeImageSupport >> baseline: spec [
 				baseline: 'Aleph'
 				with: [ spec repository: 'github://pharo-project/aleph/src' ].
 				
-			spec package: 'GT-Spotter-Indexes' with: [ spec requires: #(Aleph VMTunning) ].
-			spec package: 'GT-Spotter-Indexes-Tests' with: [ spec requires: #('GT-Spotter-Indexes') ]. 
+			spec package: 'Spotter-Indexes' with: [ spec requires: #(Aleph VMTunning) ].
+			spec package: 'Spotter-Indexes-Tests' with: [ spec requires: #('GT-Spotter-Indexes') ]. 
 			
 			spec group: 'default' with: #('GT-Spotter-Indexes' 'GT-Spotter-Indexes-Tests')]
 ]
@@ -37,6 +37,6 @@ BaselineOfLargeImageSupport >> postload: loader package: packageSpec [
 
 	"I will recalculate the indexes"
 	Smalltalk
-		at: #SptSourceWithIndexFactory
+		at: #StSourceWithIndexFactory
 		ifPresent: [ :sourceWithIndexFactory | sourceWithIndexFactory buildIndexes ].
 ]

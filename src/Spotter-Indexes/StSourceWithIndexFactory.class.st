@@ -4,50 +4,50 @@ I am a source factory that uses the indexes.
 I will return the classes and implementor sources that uses the AlephIndexes.
 "
 Class {
-	#name : #SptSourceWithIndexFactory,
+	#name : #StSourceWithIndexFactory,
 	#superclass : #StSourceFactory,
-	#category : #'GT-Spotter-Indexes'
+	#category : #'Spotter-Indexes'
 }
 
 { #category : #'detecting implementations' }
-SptSourceWithIndexFactory class >> buildIndexes [
+StSourceWithIndexFactory class >> buildIndexes [
 	AlpIndexManager activate.
 	GCConfiguration forLargeObjectAllocation
 		activeDuring: [ AlpIndexManager current rebuildAll ]
 ]
 
 { #category : #'detecting implementations' }
-SptSourceWithIndexFactory class >> isAvailable [ 
+StSourceWithIndexFactory class >> isAvailable [ 
 
 	^ AlpIndexManager isActive
 ]
 
 { #category : #'detecting implementations' }
-SptSourceWithIndexFactory class >> priority [ 
+StSourceWithIndexFactory class >> priority [ 
 
 	^ 10
 ]
 
 { #category : #'sources - classes' }
-SptSourceWithIndexFactory >> classesBeginsWithSource [
+StSourceWithIndexFactory >> classesBeginsWithSource [
 
-	 ^ SptClassBeginsWithWithIndex new
+	 ^ StClassBeginsWithWithIndex new
 ]
 
 { #category : #'sources - classes' }
-SptSourceWithIndexFactory >> classesSubstringSource [
+StSourceWithIndexFactory >> classesSubstringSource [
 
-	^ SptClassSubstringWithIndex new
+	^ StClassSubstringWithIndex new
 ]
 
 { #category : #'sources - implementors' }
-SptSourceWithIndexFactory >> implementorsBeginsWithSource [
+StSourceWithIndexFactory >> implementorsBeginsWithSource [
 
-	^ SptImplementorsBeginsWithWithIndex new
+	^ StImplementorsBeginsWithWithIndex new
 ]
 
 { #category : #'sources - implementors' }
-SptSourceWithIndexFactory >> implementorsSubstringSource [
+StSourceWithIndexFactory >> implementorsSubstringSource [
 
-	^ SptImplementorsSubstringWithIndex new
+	^ StImplementorsSubstringWithIndex new
 ]
