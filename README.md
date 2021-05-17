@@ -71,3 +71,18 @@ The memory footprint depends on the nature of the indexed image. For the previou
 is around ~400 MB. Different experiments shows a penalty of 20%, although it will depend of the ammount of symbols,
 classes and methods. And also how these methods interact with each other specially for senders and references.
 Other important differenciating element is the string distribution of the selectors and how much they have in common.
+
+# Activating / Deactivating
+
+The indexing and the storag of the information can be activated / deactivated sending messages to AlpIndexManager
+
+To activate:
+```
+AlpIndexManager activate
+```
+To deactivate:
+```
+AlpIndexManager deactivate
+```
+It is remarkable that the activation will trigger a recalculation of the indexes, and that the deactivation discards existing indexes. 
+This is done, because once AlpIndexManager is deactivated it will not keep updated the indexes and the information will be invalid.
