@@ -11,7 +11,10 @@ Class {
 
 { #category : #'detecting implementations' }
 StSourceWithIndexFactory class >> buildIndexes [
-	AlpIndexManager activate.
+
+	GCConfiguration forLargeObjectAllocation
+		activeDuring: [ AlpIndexManager activate ].
+
 
 ]
 
