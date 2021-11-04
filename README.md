@@ -74,7 +74,7 @@ Other important differenciating element is the string distribution of the select
 
 # Activating / Deactivating
 
-The indexing and the storag of the information can be activated / deactivated sending messages to AlpIndexManager
+The indexing and the storage of the information can be activated / deactivated sending messages to AlpIndexManager
 
 To activate:
 ```
